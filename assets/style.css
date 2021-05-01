@@ -258,7 +258,8 @@ footer nav ul li a {
   @media screen and (max-width: 768px) {
     .flex-item,
     .flex-item:first-child {
-      flex-basis: 100%;
+     flex:0 0 0 100%;
+     flex-wrap: wrap;
     }
   
     .flex-item:first-child {
@@ -295,9 +296,13 @@ footer nav ul li a {
         width: 100%;
         justify-content: center;
       }
-    
+
+      
+    /* .secondPrgraph{
+        flex: 0 0 100%;
+    } */
   
-    /* header nav {
+     /* header nav {
       justify-content: center;
     }
   
@@ -305,5 +310,5 @@ footer nav ul li a {
     .page-section > div {
       flex: 0 0 100%;
     } 
-    */
+     */
 } 
