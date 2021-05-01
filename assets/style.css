@@ -2,11 +2,42 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+ 
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+body{
+    margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--primary);
+  background-color: var(--body);
+  line-height: 1.5;
+}
+:root{
+    --primary:rgba(0, 0, 0, 0.5);
+    --secondary:#457b9d;
+    --buttonColor:#83c5be;
+    --header:#a8dadc;
+    --hover:#d62828;
+    --body:#f8edeb;
 }
 
 header {
   display: flex;
-  background-color: aqua;
+  background-color: var(--header);
+  position: sticky;
+  top:0;
   justify-content: space-between;
   flex-wrap: wrap;
   background-image: url('./image/kzwT7.jpg');
@@ -16,11 +47,11 @@ header {
   background-attachment: fixed;
 }
 header h1 {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px var(--primary);
 }
 header a {
   text-decoration: none;
-  color: blue;
+  color: var(--secondary);
 }
 header nav ul {
   display: flex;
@@ -29,23 +60,29 @@ header nav ul {
   align-items: center;
   list-style: none;
 }
-header nav ul li a {
+header nav ul li {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 
 footer {
      /* background-color: cornflowerblue; */
     /* padding: 40px 35px; */
-    display: flex;
-    /* justify-content: space-between; */
+    display: flex; 
+    justify-content:space-between;
     /* flex-wrap: wrap; */
     /* width: 100%; */
-    margin: 16px 0;
+    border:3px solid red;
+    /* margin: 16px 0; */
 }
 
+footer address{
+    text-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    display: flex;
+    justify-content: space-between;
+}
 
 footer nav ul {
   display: flex;
@@ -59,7 +96,7 @@ footer nav ul li a {
     font-weight: lighter;
     margin: 90px;
     text-shadow: 0 0 10px rgb(0 0 0 / 50%);
-    border-bottom: 4px solid;
+    
 }
 
 .flex-container {
@@ -106,20 +143,14 @@ footer nav ul li a {
 .surf-report {
   width: 100%;
 }
-/* .pageSelection {
-  display: flex;
-} */
 
-/* .pageSelection h2 {
-  margin: auto;
-  padding: 0 35px;
-} */
 .aboutMe h2 , .pageSelection h2, footer h2{
+   
     border-right: 6px solid green;
     /* height: 100%; */
     display: flex;
     padding: 10px 20px 0 0;
-    align-items: flex-start;
+    align-items: center;
     font-size: 40px;
     text-align: right;
     min-width: 200px;
@@ -142,9 +173,15 @@ footer nav ul li a {
 .secondPrgraph {
   height: 60%;
   width: 100;
-  background-color: chartreuse;
+ background-image: url('./image/new.jpg');
+ background-size:cover;
+ background-position: 100%;
+ background-attachment:fixed;
+ /* width: 100px;
+ height: 100px; */
+ 
 }
-.aboutMe, .pageSelection {
+.aboutMe, .pageSelection, footer {
     max-width: 1440px;
     margin: 32px auto 0 auto;
     display: flex;
@@ -152,7 +189,7 @@ footer nav ul li a {
 .secondPrgraph button {
   margin: 0 56px 26px 0;
   border: none;
-  background-color: aquamarine;
+  background-color:var(--buttonColor);
   padding: 24px;
   font-size: 32px;
   font-weight: 700;
@@ -175,3 +212,98 @@ footer nav ul li a {
     flex-direction: column;
     padding: 8px 24px;
 }
+
+.contact address a{
+    padding: 35px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-style: normal;
+}
+
+.contact address a:hover {
+    background-size: 100% 88%;
+    color: var(--secondary);
+  }
+  header nav ul li a:hover{
+    background-size: 100% 100%;
+    color: var(--hover);
+  }
+
+  .flex-item:hover {
+    background-color: red;
+  }
+  .inner-container h3 {
+    font-size: 1.6rem;
+  }
+
+  .run-buddy {
+    background-image: url("./image/run-buddy.jpg");
+  }
+  
+  .led-wall {
+    background-image: url("./image/led-wall.jpg");
+  }
+  
+  .react-calc {
+    background-image: url("./image/react-calc.png");
+  }
+  
+  .pastel-puzzles {
+    background-image: url("./image/pastel-puzzles.jpg");
+  }
+  
+  .surf-report {
+    background-image: url("./image/surf-repor.jpg");
+  }
+  @media screen and (max-width: 768px) {
+    .flex-item,
+    .flex-item:first-child {
+      flex-basis: 100%;
+    }
+  
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+  
+    .hero-banner {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .contact address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      text-align: center;
+       position: relative;
+      /* padding: 5px;
+      margin-bottom: 10px;
+      font-size: 10vw; */
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+      }
+    
+  
+    /* header nav {
+      justify-content: center;
+    }
+  
+    .page-section > h2,
+    .page-section > div {
+      flex: 0 0 100%;
+    } 
+    */
+} 
