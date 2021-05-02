@@ -222,9 +222,13 @@ header nav ul li a:hover {
 }
 
 .flex-item:hover {
+ 
   background-color: red;
   opacity: 0.5;
   
+}
+.inner-container:hover{
+  opacity:unset;
 }
 .inner-container h3 {
   font-size: 1.6rem;
