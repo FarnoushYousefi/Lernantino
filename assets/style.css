@@ -29,7 +29,7 @@ body {
   --secondary: #457b9d;
   --buttonColor: #83c5be;
   --header: #a8dadc;
-  --hover: #d62828;
+  --hover: rgba(255,255,255, 0.75);
   --body: #f8edeb;
   --footer:rebeccapurple;
 }
@@ -201,14 +201,14 @@ footer address a {
 
 footer address a:hover {
   background-size: 100% 88%;
-  color: var(--secondary);
-  background-color: rebeccapurple;
+
+  background-color: var(--hover);
   border-radius: 15px;
   padding: 10px 1px;
 }
 header nav ul li a:hover {
   background-size: 100% 100%;
-  background-color: var(--body);
+  background-color: var(--hover);
   border-radius: 15px;
   padding: 10px 1px;
 }
