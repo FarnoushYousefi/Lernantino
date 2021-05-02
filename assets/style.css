@@ -20,7 +20,7 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  color: var(--primary);
+  color: black;
   background-color: var(--body);
   line-height: 1.5;
 }
@@ -31,6 +31,7 @@ body {
   --header: #a8dadc;
   --hover: #d62828;
   --body: #f8edeb;
+  --footer:rebeccapurple;
 }
 
 header {
@@ -63,18 +64,14 @@ header nav ul li {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
-  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  
 }
 
 footer {
-  /* background-color: cornflowerblue; */
-  /* padding: 40px 35px; */
+
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
-  /* width: 100%; */
 
-  /* margin: 16px 0; */
 }
 
 footer address {
@@ -85,19 +82,6 @@ footer address {
   align-items: center;
 }
 
-footer nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-footer nav ul li a {
-  padding: 10px 15px;
-  font-weight: lighter;
-  margin: 90px;
-  text-shadow: 0 0 10px rgb(0 0 0 / 50%);
-}
 
 .flex-container {
   margin-left: 16px;
@@ -105,9 +89,6 @@ footer nav ul li a {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  /* margin-top: 100px; */
-  /* border-left: 6px solid green; */
-  /* padding: 34px; */
   flex: 1;
 }
 
@@ -129,11 +110,8 @@ footer nav ul li a {
   justify-content: flex-end;
 }
 .flex-item span {
-  /* pushes element to bottom of flex item */
-  margin-top: auto;
-  /* width: fit-content; */
-
-  color: #393b4f;
+    margin-top: auto;
+   color: #393b4f;
   padding: 16px;
   text-align: center;
 }
@@ -173,12 +151,11 @@ footer h2 {
 .secondPrgraph {
   height: 60%;
   width: 100;
-  background-image: url('./image/new.jpg');
+  background-image: url('./image/flower.jpg');
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
-  /* width: 100px;
- height: 100px; */
+  background-repeat: cover;
+ 
 }
 .aboutMe,
 .pageSelection,
@@ -197,7 +174,7 @@ footer {
 }
 .secondPrgraph {
   height: 300px;
-  background-color: pink;
+  background-color:var(--primary);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -207,29 +184,29 @@ footer {
   justify-content: flex-end;
 }
 .inner-container {
-  background-color: antiquewhite;
+  background-color: var(--body);
   display: flex;
   width: fit-content;
   flex-direction: column;
   padding: 8px 24px;
-  /* max-width: 100%;
-    overflow: hidden; */
+
 }
 
-.contact address a {
+footer address a {
   padding: 35px;
   text-decoration: none;
   font-size: 1.3rem;
   font-style: normal;
 }
 
-.contact address a:hover {
+footer address a:hover {
   background-size: 100% 88%;
   color: var(--secondary);
+  background-color: rebeccapurple;
 }
 header nav ul li a:hover {
   background-size: 100% 100%;
-  color: var(--hover);
+  background-color: var(--body);
 }
 
 .flex-item:hover {
@@ -286,8 +263,7 @@ address a:visited {
 }
 
 @media screen and (max-width: 375px) {
-  /* .flex-item, .pageSelection contact{
-    flex: 0 0 80%; */
+  
   .flex-container {
     width: 100%;
     overflow: auto;
@@ -312,58 +288,3 @@ address a:visited {
 }
 }
 
-/* @media screen and (max-width: 768px) {
-    .flex-item,
-    .flex-item:first-child {
-     flex:0 0 0 100%;
-     flex-wrap: wrap;
-    }
-  
-    .flex-item:first-child {
-      min-height: 150px;
-    }
-  
-    .hero-banner {
-      justify-content: center;
-      text-align: center;
-    }
-  
-    .contact address {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-  @media screen and (max-width: 980px) {
-    header {
-      padding: 0 0 10px 0;
-      justify-content: center;
-      text-align: center;
-    }
-  
-    header h1 {
-      width: 100%;
-      text-align: center;
-       position: relative;
-      /* padding: 5px;
-      margin-bottom: 10px;
-      font-size: 10vw; */
-/* }
-    header nav ul {
-        margin-top: 20px;
-        width: 100%;
-        justify-content: center;
-      } */
-
-/* .secondPrgraph{
-        flex: 0 0 100%;
-    } */
-
-/* header nav {
-      justify-content: center;
-    }
-  
-    .page-section > h2,
-    .page-section > div {
-      flex: 0 0 100%;
-    } 
-     */
