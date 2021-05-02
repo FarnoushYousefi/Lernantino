@@ -203,15 +203,20 @@ footer address a:hover {
   background-size: 100% 88%;
   color: var(--secondary);
   background-color: rebeccapurple;
+  border-radius: 15px;
+  padding: 10px 1px;
 }
 header nav ul li a:hover {
   background-size: 100% 100%;
   background-color: var(--body);
+  border-radius: 15px;
+  padding: 10px 1px;
 }
 
 .flex-item:hover {
   background-color: red;
   opacity: 0.5;
+  
 }
 .inner-container h3 {
   font-size: 1.6rem;
@@ -282,9 +287,9 @@ address a:visited {
   footer h2 {
     border-right: none;
     border-bottom: 6px solid green;
-  }
+  } 
   .aboutMe, .pageSelection, footer {
     flex-direction: column;
-}
+} 
 }
 
