@@ -221,7 +221,7 @@ header nav ul li a:hover {
   padding: 10px 1px;
 }
 
-.surf-report:hover {
+.flex-item:hover {
  
   background-color: red;
   opacity: 0.5;
