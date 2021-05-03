@@ -200,19 +200,24 @@ a.flex-item{
 footer address a {
   padding: 35px;
   text-decoration: none;
+  text-decoration: none;
   font-size: 1.3rem;
   font-style: normal;
-  display: inline-block;
+  background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: bottom;
   transition: all 0.25s ease-in;
+  display: inline-block;
 
 }
 
 footer address a:hover {
   background-size: 100% 88%;
 
-  background-color: var(--hover);
-  border-radius: 15px;
-  padding: 10px 1px;
+  /* background-color: var(--hover); */
+   border-radius: 15px;
+  padding: 10px 1px; 
 }
 header nav ul li a:hover {
   background-size: 100% 100%;
